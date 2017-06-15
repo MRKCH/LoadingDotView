@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kch.loadingdotview.MainActivity">
+
+
+    <com.kch.loadingdotview_lib.LoadingDotView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading_dot_view1"
+        app:dot_color="#B452CD"
+        app:dot_radius="10dp"
+        app:dot_num="3"
+        app:dot_space="5dp"
+        app:anim_speed="180"
+        android:visibility="invisible"
+        app:dot_scaled_radius="15dp"
+        android:layout_marginBottom="20dp"/>
+    <com.kch.loadingdotview_lib.LoadingDotView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading_dot_view2"
+        app:dot_color="#1C86EE"
+        app:dot_radius="15dp"
+        app:dot_num="4"
+        app:dot_space="10dp"
+        app:anim_speed="180"
+        android:visibility="invisible"
+        app:dot_scaled_radius="20dp"
+        android:layout_marginBottom="20dp"/>
+    <com.kch.loadingdotview_lib.LoadingDotView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading_dot_view3"
+        app:dot_color="#7FFF00"
+        app:dot_radius="20dp"
+        app:dot_num="5"
+        app:dot_space="14dp"
+        app:anim_speed="180"
+        android:visibility="invisible"
+        app:dot_scaled_radius="25dp"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示"
+            android:onClick="show"
+            android:id="@+id/btn_show"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐藏"
+            android:onClick="hide"
+            android:id="@+id/btn_hide"/>
+    </LinearLayout>
+
+</LinearLayout>
