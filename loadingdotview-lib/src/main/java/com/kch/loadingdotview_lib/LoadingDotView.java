@@ -129,6 +129,52 @@ public class LoadingDotView extends View {
         }
     }
 
+    public void setDotColor(int color){
+        this.mDotColor = color;
+        mPaint.setColor(mDotColor);
+    }
+
+    public void setDotNum(int dotNum){
+        this.mDotNum = dotNum;
+
+        if (mDotNum<defaultDotNum||mDotNum>10)
+            mDotNum=defaultDotNum;
+        initDots();
+
+    }
+
+    public void setDotRadius(int dotRadius){
+        this.mDotRadius = dotRadius;
+        initDots();
+    }
+
+    public void setDotSpace(float dotSpace){
+        this.mDotSpace = dotSpace;
+
+        if (mDotSpace<defaultDotSpace)
+            mDotSpace=defaultDotSpace;
+        initDots();
+
+    }
+
+    public void setMaxDotRadius(float maxDotRadius){
+        this.mMaxDotRadius = maxDotRadius;
+
+        if (mMaxDotRadius<mDotRadius||mMaxDotRadius>(mDotRadius+mDotSpace))
+            mMaxDotRadius=mDotRadius+mDotSpace/2;
+        initDots();
+    }
+
+    public void setmSpeed(int speed){
+        this.mSpeed = speed;
+
+        if (mSpeed<0)
+            mSpeed = defaultSpeed;
+    }
+
+    public void setInterpolator(Interpolator interpolator){
+        this.mInterpolator = interpolator;
+    }
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
