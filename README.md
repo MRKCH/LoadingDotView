@@ -1,10 +1,12 @@
-LoadingDotView
+LoadingDotView<br /> 
 =
+
 一个简单的加载控件，几个圆点来回闪烁，速度快的话有点像跑马灯。
 效果图如下
 -
 
 ![](http://i.imgur.com/NhZdAVW.gif)
+
 xml布局
 -
 
@@ -32,7 +34,7 @@ xml布局
 
 使用方法
 ---
-使用起来相当简单，不需要任何初始化，获取到实例控件后，设置相关属性即可
+使用起来相当简单，获取到实例控件后，设置相关属性即可
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
